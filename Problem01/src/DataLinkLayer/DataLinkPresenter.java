@@ -1,7 +1,6 @@
 package DataLinkLayer;
 
 import JavaBean.EthernetFrame;
-import Utils.BasePresenter;
 import Utils.DataTranslationUtil;
 import Utils.RelativeParameterUtil;
 import Utils.SimpleProtocolType;
@@ -9,7 +8,7 @@ import Utils.SimpleProtocolType;
 /**
  * Created by yasic on 16-6-7.
  */
-public class DataLinkPresenter extends BasePresenter implements IDataLinkPresenter {
+public class DataLinkPresenter implements IDataLinkPresenter {
     private byte[] data;
     @Override
     public boolean getMessageFromNetwork(byte[] data, SimpleProtocolType simpleProtocolType) {

@@ -4,7 +4,6 @@ import JavaBean.TCPMessage;
 import JavaBean.UDPMessage;
 import NetworkLayer.INetworkPresenter;
 import NetworkLayer.NetworkPresenter;
-import Utils.BasePresenter;
 import Utils.DataTranslationUtil;
 import Utils.RelativeParameterUtil;
 import Utils.SimpleProtocolType;
@@ -16,7 +15,7 @@ import static Utils.SimpleProtocolType.TCP;
 /**
  * Created by yasic on 16-6-7.
  */
-public class TransportPresenter extends BasePresenter<TCPMessage> implements ITransportPresenter {
+public class TransportPresenter implements ITransportPresenter {
     private int randomSequence = (int) ((2147483647) * Math.random() + 1);
     private byte[] data;
     private INetworkPresenter iNetworkPresenter;

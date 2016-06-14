@@ -9,8 +9,6 @@ public class Main {
         for (int i = 0; i < 1000; i++){
             s += "hello world ";
         }
-        applicationPresenter.sendMessageToTransportLayer(
-                s,
-                SimpleProtocolType.UDP);
+        applicationPresenter.sendMessageToTransportLayer(s, SimpleProtocolType.UDP);
     }
 }

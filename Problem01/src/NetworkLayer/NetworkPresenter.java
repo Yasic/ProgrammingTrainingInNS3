@@ -3,7 +3,6 @@ package NetworkLayer;
 import DataLinkLayer.DataLinkPresenter;
 import DataLinkLayer.IDataLinkPresenter;
 import JavaBean.IPv4Packet;
-import Utils.BasePresenter;
 import Utils.DataTranslationUtil;
 import Utils.RelativeParameterUtil;
 import Utils.SimpleProtocolType;
@@ -13,7 +12,7 @@ import java.util.List;
 /**
  * Created by yasic on 16-6-7.
  */
-public class NetworkPresenter extends BasePresenter implements INetworkPresenter {
+public class NetworkPresenter implements INetworkPresenter {
     private byte[] data;
     private IDataLinkPresenter iDataLinkPresenter;
     @Override
@@ -72,8 +71,8 @@ public class NetworkPresenter extends BasePresenter implements INetworkPresenter
                                 .setTtl((byte) 13)
                                 .setProtocol((byte) 6)
                                 .setHeaderCheckSum((short) 0)
-                                .setSourceAddress(0)
-                                .setDestinationAddress(0)
+                                .setSourceAddress(RelativeParameterUtil.SOURCEIPADDRESS)
+                                .setDestinationAddress(RelativeParameterUtil.DESTINATIONIPADDRESS)
                                 .setTransprotData(targetData)
                                 .setOptions(null)
                                 .build();
@@ -91,8 +90,8 @@ public class NetworkPresenter extends BasePresenter implements INetworkPresenter
                                 .setTtl((byte) 13)
                                 .setProtocol((byte) 6)
                                 .setHeaderCheckSum((short) 0)
-                                .setSourceAddress(0)
-                                .setDestinationAddress(0)
+                                .setSourceAddress(RelativeParameterUtil.SOURCEIPADDRESS)
+                                .setDestinationAddress(RelativeParameterUtil.DESTINATIONIPADDRESS)
                                 .setTransprotData(targetData)
                                 .setOptions(null)
                                 .build();
@@ -111,8 +110,8 @@ public class NetworkPresenter extends BasePresenter implements INetworkPresenter
                             .setTtl((byte) 13)
                             .setProtocol((byte) 6)
                             .setHeaderCheckSum((short) 0)
-                            .setSourceAddress(0)
-                            .setDestinationAddress(0)
+                            .setSourceAddress(RelativeParameterUtil.SOURCEIPADDRESS)
+                            .setDestinationAddress(RelativeParameterUtil.DESTINATIONIPADDRESS)
                             .setTransprotData(targetData)
                             .setOptions(null)
                             .build();
@@ -132,8 +131,8 @@ public class NetworkPresenter extends BasePresenter implements INetworkPresenter
                                 .setTtl((byte) 13)
                                 .setProtocol((byte) 17)
                                 .setHeaderCheckSum((short) 0)
-                                .setSourceAddress(0)
-                                .setDestinationAddress(0)
+                                .setSourceAddress(RelativeParameterUtil.SOURCEIPADDRESS)
+                                .setDestinationAddress(RelativeParameterUtil.DESTINATIONIPADDRESS)
                                 .setTransprotData(targetData)
                                 .setOptions(null)
                                 .build();
@@ -151,8 +150,8 @@ public class NetworkPresenter extends BasePresenter implements INetworkPresenter
                                 .setTtl((byte) 13)
                                 .setProtocol((byte) 17)
                                 .setHeaderCheckSum((short) 0)
-                                .setSourceAddress(0)
-                                .setDestinationAddress(0)
+                                .setSourceAddress(RelativeParameterUtil.SOURCEIPADDRESS)
+                                .setDestinationAddress(RelativeParameterUtil.DESTINATIONIPADDRESS)
                                 .setTransprotData(targetData)
                                 .setOptions(null)
                                 .build();
@@ -171,8 +170,8 @@ public class NetworkPresenter extends BasePresenter implements INetworkPresenter
                             .setTtl((byte) 13)
                             .setProtocol((byte) 17)
                             .setHeaderCheckSum((short) 0)
-                            .setSourceAddress(0)
-                            .setDestinationAddress(0)
+                            .setSourceAddress(RelativeParameterUtil.SOURCEIPADDRESS)
+                            .setDestinationAddress(RelativeParameterUtil.DESTINATIONIPADDRESS)
                             .setTransprotData(targetData)
                             .setOptions(null)
                             .build();

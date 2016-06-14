@@ -10,4 +10,6 @@ public class RelativeParameterUtil {
     public static final byte IPVIRSION = 4;
     public static final byte DESTINATIONMACADDRESS = 0;
     public static final byte SOURCEMACADDRESS = 0;
+    public static final int SOURCEIPADDRESS = 192 * 256 * 256 * 256 + 168 * 256 * 256 + 1 * 256 + 1 * 1;
+    public static final int DESTINATIONIPADDRESS = 192 * 256 * 256 * 256 + 168 * 256 * 256 + 1 * 256 + 2 * 1;
 }
