@@ -43,10 +43,6 @@ public class TCPMessage extends BaseJavaBean {
                 + (this.NS << 8) + (this.CWR << 7) + (this.ECE << 6)
                 + (this.URG << 5) + (this.ACK << 4) + (this.PSH << 3)
                 + (this.RST << 2) + (this.SYN << 1) + (this.FIN)));
-        /*System.out.println(this.FIN + " " + (this.dataOffset << 12)
-                + (this.NS << 8) + (this.CWR << 7) + (this.ECE << 6)
-                + (this.URG << 5) + (this.ACK << 4) + (this.PSH << 3)
-                + (this.RST << 2) + (this.SYN << 1) + (this.FIN));*/
         byteBuffer.putShort(this.windowSize);
         byteBuffer.putShort(this.checkSum);
         byteBuffer.putShort(this.urgentPointer);
